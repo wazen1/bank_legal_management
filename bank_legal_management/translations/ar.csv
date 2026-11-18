@@ -1,0 +1,214 @@
+Bank Legal Management,إدارة الشؤون القانونية
+Legal Management,إدارة الشؤون القانونية
+Legal Case Management,إدارة القضايا القانونية
+Legal Contract Management,إدارة العقود القانونية
+Legal Opinions,الآراء القانونية
+Employee Grievances,شكاوى الموظفين
+Committee Management,إدارة اللجان
+Legal Correspondence,المراسلات القانونية
+Legal Documents,المستندات القانونية
+Legal Expenses,المصروفات القانونية
+Legal Reporting,التقارير القانونية
+Legal Settings,إعدادات الشؤون القانونية
+Legal Alert Recipient,مستلم تنبيه قانوني
+Legal Reminder Log,سجل التنبيهات القانونية
+Legal Decision,قرار قانوني
+Legal Case,قضية قانونية
+Legal Case Party,طرف في القضية
+Legal Case Claim,مطالبة في القضية
+Legal Case Assignment,تكليف قضية
+Legal Related Case,قضية مرتبطة
+Legal Linked Document,مستند مرتبط
+Legal Hearing,جلسة قانونية
+Legal Counsel,مستشار قانوني
+Legal Contract,عقد قانوني
+Legal Contract Approval,اعتماد عقد
+Contract Obligation,التزام تعاقدي
+Legal Opinion Request,طلب رأي قانوني
+Legal Opinion,رأي قانوني
+Employee Legal Grievance,شكوى موظف
+Employee Grievance Clarification,توضيح شكوى موظف
+Grievance Action Log,سجل إجراءات الشكوى
+Employee Complaints Committee,لجنة شكاوى الموظفين
+Employee Complaints Committee Member,عضو لجنة شكاوى الموظفين
+Employee Complaints Committee Meeting,اجتماع لجنة شكاوى الموظفين
+Employee Complaints Committee Agenda,بند جدول أعمال اللجنة
+Employee Complaints Committee Attendee,حضور اجتماع اللجنة
+Legal Document Register,سجل المستندات القانونية
+Legal Document Version,نسخة مستند قانوني
+Legal Expense,مصروف قانوني
+Legal System Administrator,مدير النظام القانوني
+Legal Department Manager,مدير الشؤون القانونية
+Legal Officer,موظف قانوني
+Legal Case Manager,مدير قضايا قانونية
+Legal Contract Officer,مسؤول عقود قانونية
+Legal Opinion Officer,مسؤول آراء قانونية
+Legal Document Officer,مسؤول مستندات قانونية
+Legal Expense Officer,مسؤول مصروفات قانونية
+Legal Auditor,مدقق قانوني
+Legal Opinion Requester,طالب رأي قانوني
+Employee Grievance Submitter,مقدم شكوى موظف
+Legal Grievance Officer,مسؤول شكاوى قانونية
+Legal Grievance Manager,مدير شكاوى قانونية
+Employee Complaints Committee Chair,رئيس لجنة شكاوى الموظفين
+Employee Complaints Committee Member Role,عضو لجنة شكاوى الموظفين
+Employee Complaints Committee Secretary,أمين لجنة شكاوى الموظفين
+Authorized Decision Maker,معتمد مخوّل
+Draft,مسودة
+Registered,مسجلة
+Under Review,قيد المراجعة
+Assigned,مكلفة
+In Progress,قيد التنفيذ
+Hearing Scheduled,جلسة مجدولة
+Awaiting Documents,بانتظار مستندات
+Awaiting Judgment,بانتظار الحكم
+Judgment Issued,صدر الحكم
+Under Appeal,قيد الاستئناف
+Settled,تمت التسوية
+Closed,مغلقة
+Archived,مؤرشفة
+Under Legal Review,قيد المراجعة القانونية
+Returned for Amendment,معادة للتعديل
+Pending Approval,بانتظار الاعتماد
+Pending Signature,بانتظار التوقيع
+Active,نشط
+Expiring,قارب على الانتهاء
+Renewed,مجدد
+Terminated,منتهٍ
+Expired,منتهية المدة
+Submitted,مقدمة
+Awaiting Clarification,بانتظار توضيح
+Draft Opinion,مسودة رأي
+Legal Review,مراجعة قانونية
+Approved,معتمد
+Rejected,مرفوض
+Cancelled,ملغى
+Legal Department,إدارة الشؤون القانونية
+Employee Complaints Committee Route,لجنة شكاوى الموظفين
+Low,منخفض
+Medium,متوسط
+High,مرتفع
+Critical,حرج
+Normal,عادي
+Confidential,سري
+Highly Confidential,سري للغاية
+Civil,مدني
+Commercial,تجاري
+Labor,عمالي
+Criminal,جنائي
+Administrative,إداري
+Banking,مصرفي
+Execution,تنفيذ
+Other,أخرى
+Internal,داخلي
+External,خارجي
+Customer Dispute,نزاع مع عميل
+Supplier Dispute,نزاع مع مورد
+Employee-related,متعلق بالموظفين
+Regulatory,رقابي
+Service,خدمات
+Lease,إيجار
+Consultancy,استشارات
+Employment,توظيف
+NDA,اتفاقية سرية
+Settlement,تسوية
+Loan,قرض
+Procurement,مشتريات
+Incoming,وارد
+Outgoing,صادر
+Email,بريد إلكتروني
+Courier,بريد سريع
+Hand Delivery,تسليم يدوي
+Received,مستلم
+Sent,مرسل
+Under Follow-up,قيد المتابعة
+Legal Fees,رسوم قانونية
+Court Fees,رسوم محاكم
+Translation,ترجمة
+Expert Fees,أتعاب خبراء
+Travel,سفر
+Paid,مدفوع
+Pending Review,بانتظار المراجعة
+Workplace,بيئة العمل
+Discrimination,تمييز
+Harassment,تحرش
+Financial,مالي
+Contractual,تعاقدي
+Retaliation,انتقام
+First Hearing,الجلسة الأولى
+Pleading,مرافعة
+Evidence,إثبات
+Expert,خبرة
+Judgment,حكم
+Appeal,استئناف
+Scheduled,مجدول
+Completed,مكتمل
+Postponed,مؤجل
+Present,حاضر
+Absent,غائب
+Excused,معذور
+Queued,في الانتظار
+Skipped,متجاوز
+Failed,فشل
+Pending,معلق
+Overdue,متأخر
+Waived,معفى
+Bank,المصرف
+Counterparty,الطرف الآخر
+Both,كليهما
+None,بدون
+Monthly,شهري
+Quarterly,ربع سنوي
+Semi-Annual,نصف سنوي
+Annual,سنوي
+Draft Recommendation,توصية مسودة
+Implemented,منفذ
+Superseded,مستبدل
+Under Committee Deliberation,قيد مداولات اللجنة
+Legal Recommendation,توصية قانونية
+Committee Recommendation,توصية اللجنة
+Scheduled for Meeting,مجدولة للاجتماع
+Decision Issued,صدر القرار
+Register Case,تسجيل القضية
+Start Legal Review,بدء المراجعة القانونية
+Assign Case,تكليف القضية
+Start Progress,بدء التنفيذ
+Mark Hearing Scheduled,تعيين جلسة مجدولة
+Request Documents,طلب مستندات
+Await Judgment,انتظار الحكم
+Mark Settled,تعيين كتسوية
+Close Case,إغلاق القضية
+Resume Case,استئناف القضية
+Resume Work,استئناف العمل
+Record Judgment,تسجيل الحكم
+File Appeal,تقديم استئناف
+Record Settlement,تسجيل التسوية
+Record Appeal Judgment,تسجيل حكم الاستئناف
+Archive Case,أرشفة القضية
+Send for Legal Review,إرسال للمراجعة القانونية
+Return for Amendment,إعادة للتعديل
+Send for Approval,إرسال للاعتماد
+Resubmit for Review,إعادة الإرسال للمراجعة
+Approve Contract,اعتماد العقد
+Activate Contract,تفعيل العقد
+Mark Expiring,تعيين كقارب على الانتهاء
+Terminate Contract,إنهاء العقد
+Mark Expired,تعيين كمنتهي المدة
+Mark Renewed,تعيين كمجدد
+Archive Contract,أرشفة العقد
+Submit for Review,إرسال للمراجعة
+Start Review,بدء المراجعة
+Reject Request,رفض الطلب
+Request Clarification,طلب توضيح
+Draft Opinion Action,إعداد مسودة الرأي
+Submit Clarification,تقديم التوضيح
+Send for Legal Review Action,إرسال للمراجعة القانونية
+Return for Revision,إعادة للتنقيح
+Approve Request,اعتماد الطلب
+Close Request,إغلاق الطلب
+Cancel Request,إلغاء الطلب
+Legal Case Register,سجل القضايا القانونية
+Legal Contract Register,سجل العقود القانونية
+Employee Legal Grievance Register,سجل شكاوى الموظفين
+Legal Deadlines,الاستحقاقات القانونية
+Legal Expense Summary,ملخص المصروفات القانونية

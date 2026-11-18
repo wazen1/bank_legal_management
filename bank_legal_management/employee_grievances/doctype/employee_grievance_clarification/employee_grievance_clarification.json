@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "requested_on",
+  "requested_by",
+  "request_text",
+  "response_text",
+  "responded_on",
+  "responded_by",
+  "status",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "requested_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ الطلب",
+   "read_only": 1,
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "طالب الإيضاح",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "request_text",
+   "fieldtype": "Text",
+   "label": "نص طلب الإيضاح",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "response_text",
+   "fieldtype": "Text",
+   "label": "رد الموظف",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "responded_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ الرد",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "responded_by",
+   "fieldtype": "Link",
+   "label": "أرسل الرد",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "الحالة",
+   "options": "Requested\nResponded",
+   "default": "Requested",
+   "read_only": 1,
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "مرفق الرد",
+   "allow_on_submit": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Employee Grievances",
+ "name": "Employee Grievance Clarification",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0
+}

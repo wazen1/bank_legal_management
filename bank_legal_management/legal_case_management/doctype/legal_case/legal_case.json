@@ -1,0 +1,454 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identification_section",
+  "naming_series",
+  "case_title",
+  "case_type",
+  "case_category",
+  "status",
+  "registration_date",
+  "source",
+  "importance",
+  "confidentiality",
+  "company",
+  "branch",
+  "court_section",
+  "court_or_authority",
+  "court_case_number",
+  "filing_date",
+  "opposing_party",
+  "claim_amount",
+  "currency",
+  "dates_section",
+  "assigned_officer",
+  "internal_counsel",
+  "external_counsel",
+  "last_hearing_date",
+  "next_hearing_date",
+  "closure_date",
+  "archive_date",
+  "facts_section",
+  "summary",
+  "subject_matter",
+  "claims",
+  "legal_position",
+  "actions_taken",
+  "final_result",
+  "internal_notes",
+  "parties_section",
+  "parties",
+  "case_claims",
+  "assignments",
+  "related_cases",
+  "related_documents",
+  "attachments",
+  "integration_section",
+  "project",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "label": "بيانات القضية"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "LC-.YYYY.-.#####",
+   "default": "LC-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "case_title",
+   "fieldtype": "Data",
+   "label": "عنوان القضية",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Select",
+   "label": "نوع القضية",
+   "options": "Civil\nCommercial\nLabor\nCriminal\nAdministrative\nBanking\nExecution\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "case_category",
+   "fieldtype": "Select",
+   "label": "تصنيف القضية",
+   "options": "Internal\nExternal\nCustomer Dispute\nSupplier Dispute\nEmployee-related\nRegulatory\nOther"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة القضية",
+   "options": "Draft\nRegistered\nUnder Review\nAssigned\nIn Progress\nHearing Scheduled\nAwaiting Documents\nAwaiting Judgment\nJudgment Issued\nUnder Appeal\nSettled\nClosed\nArchived",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "تاريخ التسجيل",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "مصدر القضية",
+   "options": "Legal Department\nBranch\nManagement\nCustomer\nSupplier\nExternal Counsel\nOther"
+  },
+  {
+   "fieldname": "importance",
+   "fieldtype": "Select",
+   "label": "درجة الأهمية",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "درجة السرية",
+   "options": "Normal\nConfidential\nHighly Confidential",
+   "default": "Normal"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "الشركة",
+   "options": "Company"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "الفرع",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "court_section",
+   "fieldtype": "Section Break",
+   "label": "بيانات المحكمة"
+  },
+  {
+   "fieldname": "court_or_authority",
+   "fieldtype": "Data",
+   "label": "المحكمة أو الجهة القضائية"
+  },
+  {
+   "fieldname": "court_case_number",
+   "fieldtype": "Data",
+   "label": "رقم القضية لدى المحكمة"
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "تاريخ رفع القضية"
+  },
+  {
+   "fieldname": "opposing_party",
+   "fieldtype": "Data",
+   "label": "الطرف المقابل"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "قيمة المطالبة المالية",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "العملة",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "dates_section",
+   "fieldtype": "Section Break",
+   "label": "التواريخ والمسؤوليات"
+  },
+  {
+   "fieldname": "assigned_officer",
+   "fieldtype": "Link",
+   "label": "الموظف القانوني المكلف",
+   "options": "Employee",
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "internal_counsel",
+   "fieldtype": "Link",
+   "label": "المحامي الداخلي",
+   "options": "Legal Counsel"
+  },
+  {
+   "fieldname": "external_counsel",
+   "fieldtype": "Link",
+   "label": "المحامي الخارجي / المكتب القانوني",
+   "options": "Legal Counsel"
+  },
+  {
+   "fieldname": "last_hearing_date",
+   "fieldtype": "Date",
+   "label": "تاريخ آخر جلسة",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_hearing_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الجلسة القادمة",
+   "read_only": 1
+  },
+  {
+   "fieldname": "closure_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الإغلاق",
+   "read_only": 1
+  },
+  {
+   "fieldname": "archive_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الأرشفة",
+   "read_only": 1
+  },
+  {
+   "fieldname": "facts_section",
+   "fieldtype": "Section Break",
+   "label": "الوقائع والموقف القانوني"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text",
+   "label": "ملخص الوقائع"
+  },
+  {
+   "fieldname": "subject_matter",
+   "fieldtype": "Text",
+   "label": "موضوع النزاع"
+  },
+  {
+   "fieldname": "claims",
+   "fieldtype": "Text",
+   "label": "المطالبات القانونية"
+  },
+  {
+   "fieldname": "legal_position",
+   "fieldtype": "Text",
+   "label": "الموقف القانوني"
+  },
+  {
+   "fieldname": "actions_taken",
+   "fieldtype": "Text",
+   "label": "الإجراءات المتخذة"
+  },
+  {
+   "fieldname": "final_result",
+   "fieldtype": "Text",
+   "label": "النتيجة النهائية"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text",
+   "label": "ملاحظات داخلية"
+  },
+  {
+   "fieldname": "parties_section",
+   "fieldtype": "Section Break",
+   "label": "الأطراف والمطالبات والجلسات"
+  },
+  {
+   "fieldname": "parties",
+   "fieldtype": "Table",
+   "label": "الأطراف",
+   "options": "Legal Case Party"
+  },
+  {
+   "fieldname": "case_claims",
+   "fieldtype": "Table",
+   "label": "المطالبات المالية",
+   "options": "Legal Case Claim"
+  },
+  {
+   "fieldname": "assignments",
+   "fieldtype": "Table",
+   "label": "إسناد المحامين",
+   "options": "Legal Case Assignment"
+  },
+  {
+   "fieldname": "related_cases",
+   "fieldtype": "Table",
+   "label": "القضايا المرتبطة",
+   "options": "Legal Related Case"
+  },
+  {
+   "fieldname": "related_documents",
+   "fieldtype": "Table",
+   "label": "المستندات القانونية",
+   "options": "Legal Linked Document"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "المرفقات"
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "التكامل"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "المشروع",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "مركز التكلفة",
+   "options": "Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Case Management",
+ "name": "Legal Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Document Officer",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Authorized Decision Maker",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 0,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "case_title",
+ "search_fields": "case_title,court_case_number,opposing_party,assigned_officer",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

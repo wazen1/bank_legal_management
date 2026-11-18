@@ -1,0 +1,322 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "document_title",
+  "document_type",
+  "document_date",
+  "issuing_authority",
+  "reference_number",
+  "status",
+  "confidentiality",
+  "expiry_date",
+  "attachment",
+  "description",
+  "responsible_employee",
+  "links_section",
+  "related_case",
+  "related_contract",
+  "related_grievance",
+  "related_opinion_request",
+  "versions"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "LDR-.YYYY.-.#####",
+   "default": "LDR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_title",
+   "fieldtype": "Data",
+   "label": "عنوان المستند",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "نوع المستند",
+   "options": "Contract\nCourt Judgment\nPower of Attorney\nLegal Opinion\nCorrespondence\nIdentity Document\nLicense\nEvidence\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_date",
+   "fieldtype": "Date",
+   "label": "تاريخ المستند",
+   "default": "Today"
+  },
+  {
+   "fieldname": "issuing_authority",
+   "fieldtype": "Data",
+   "label": "الجهة المصدرّة"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "رقم المرجع"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة المستند",
+   "options": "Draft\nActive\nExpired\nArchived",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "مستوى السرية",
+   "options": "Normal\nConfidential\nHighly Confidential",
+   "default": "Confidential"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الصلاحية"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "نسخة المستند"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "وصف المستند"
+  },
+  {
+   "fieldname": "responsible_employee",
+   "fieldtype": "Link",
+   "label": "المسؤول عن المستند",
+   "options": "Employee",
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "الروابط"
+  },
+  {
+   "fieldname": "related_case",
+   "fieldtype": "Link",
+   "label": "القضية",
+   "options": "Legal Case"
+  },
+  {
+   "fieldname": "related_contract",
+   "fieldtype": "Link",
+   "label": "العقد",
+   "options": "Legal Contract"
+  },
+  {
+   "fieldname": "related_grievance",
+   "fieldtype": "Link",
+   "label": "الشكوى",
+   "options": "Employee Legal Grievance"
+  },
+  {
+   "fieldname": "related_opinion_request",
+   "fieldtype": "Link",
+   "label": "طلب الرأي القانوني",
+   "options": "Legal Opinion Request"
+  },
+  {
+   "fieldname": "versions",
+   "fieldtype": "Table",
+   "label": "الإصدارات",
+   "options": "Legal Document Version"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Documents",
+ "name": "Legal Document Register",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Document Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Contract Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Authorized Decision Maker",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 0,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "document_title",
+ "search_fields": "document_title,reference_number,issuing_authority",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

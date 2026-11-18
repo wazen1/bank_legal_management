@@ -1,0 +1,265 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "legal_case",
+  "case_title",
+  "confidentiality",
+  "hearing_date",
+  "hearing_time",
+  "hearing_number",
+  "court_or_authority",
+  "hearing_type",
+  "status",
+  "hearing_summary",
+  "outcome",
+  "decision_or_action",
+  "next_action",
+  "follow_up_responsible",
+  "next_action_date",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "HEAR-.YYYY.-.#####",
+   "default": "HEAR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legal_case",
+   "fieldtype": "Link",
+   "label": "القضية",
+   "options": "Legal Case",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "case_title",
+   "fieldtype": "Data",
+   "label": "عنوان القضية",
+   "fetch_from": "legal_case.case_title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "درجة السرية",
+   "fetch_from": "legal_case.confidentiality",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hearing_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الجلسة",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "hearing_time",
+   "fieldtype": "Time",
+   "label": "وقت الجلسة"
+  },
+  {
+   "fieldname": "hearing_number",
+   "fieldtype": "Data",
+   "label": "رقم الجلسة"
+  },
+  {
+   "fieldname": "court_or_authority",
+   "fieldtype": "Data",
+   "label": "المحكمة أو الجهة"
+  },
+  {
+   "fieldname": "hearing_type",
+   "fieldtype": "Select",
+   "label": "نوع الجلسة",
+   "options": "First Hearing\nPleading\nEvidence\nExpert\nJudgment\nAppeal\nOther"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة الجلسة",
+   "options": "Scheduled\nCompleted\nPostponed\nCancelled",
+   "default": "Scheduled",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "hearing_summary",
+   "fieldtype": "Text",
+   "label": "ملخص الجلسة"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Text",
+   "label": "نتيجة الجلسة"
+  },
+  {
+   "fieldname": "decision_or_action",
+   "fieldtype": "Text",
+   "label": "القرار أو الإجراء الصادر"
+  },
+  {
+   "fieldname": "next_action",
+   "fieldtype": "Text",
+   "label": "الإجراء المطلوب لاحقًا"
+  },
+  {
+   "fieldname": "follow_up_responsible",
+   "fieldtype": "Link",
+   "label": "المسؤول عن المتابعة",
+   "options": "Employee",
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "next_action_date",
+   "fieldtype": "Date",
+   "label": "موعد الإجراء القادم"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "المرفقات"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Case Management",
+ "name": "Legal Hearing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Document Officer",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Authorized Decision Maker",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 0,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "case_title",
+ "search_fields": "case_title,court_or_authority,hearing_date",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

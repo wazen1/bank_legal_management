@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "alert_type",
+  "alert_key",
+  "reference_doctype",
+  "reference_name",
+  "recipients",
+  "status",
+  "sent_on",
+  "error_message",
+  "details"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "LRL-.YYYY.-.#####",
+   "default": "LRL-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alert_type",
+   "fieldtype": "Data",
+   "label": "نوع التنبيه",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "alert_key",
+   "fieldtype": "Data",
+   "label": "مفتاح منع التكرار",
+   "unique": 1,
+   "reqd": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "نوع السجل",
+   "options": "DocType",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Data",
+   "label": "السجل المرجعي",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Long Text",
+   "label": "المستلمون",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "الحالة",
+   "options": "Queued\nSent\nSkipped\nFailed",
+   "default": "Queued",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sent_on",
+   "fieldtype": "Datetime",
+   "label": "وقت الإرسال",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "رسالة الخطأ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Small Text",
+   "label": "تفاصيل تشغيلية",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Management",
+ "name": "Legal Reminder Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "alert_type",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

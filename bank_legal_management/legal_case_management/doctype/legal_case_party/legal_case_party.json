@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "party_type",
+  "party",
+  "party_name",
+  "role_in_case",
+  "counsel",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "نوع الطرف",
+   "options": "Customer\nSupplier\nEmployee\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "الطرف في ERPNext",
+   "options": "party_type"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "اسم الطرف",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "role_in_case",
+   "fieldtype": "Select",
+   "label": "صفة الطرف",
+   "options": "Plaintiff\nDefendant\nWitness\nGuarantor\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "counsel",
+   "fieldtype": "Link",
+   "label": "المحامي",
+   "options": "Legal Counsel"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "ملاحظات"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Case Management",
+ "name": "Legal Case Party",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0
+}

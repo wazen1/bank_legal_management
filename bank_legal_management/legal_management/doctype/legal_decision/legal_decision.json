@@ -1,0 +1,352 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "decision_title",
+  "decision_type",
+  "status",
+  "subject",
+  "reference_doctype",
+  "reference_name",
+  "recommending_entity",
+  "recommendation",
+  "prepared_by",
+  "referred_on",
+  "final_section",
+  "final_decision",
+  "decision_date",
+  "external_reference",
+  "decision_maker",
+  "approved_on",
+  "rejection_reason",
+  "attachments",
+  "notes",
+  "audit_section",
+  "recorded_by",
+  "recorded_on",
+  "confidentiality"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "LD-.YYYY.-.#####",
+   "default": "LD-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision_title",
+   "fieldtype": "Data",
+   "label": "عنوان القرار",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "decision_type",
+   "fieldtype": "Select",
+   "label": "نوع القرار",
+   "options": "Case\nContract\nLegal Opinion\nEmployee Legal Grievance\nPolicy\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة القرار",
+   "options": "Draft Recommendation\nPending Approval\nApproved\nRejected\nImplemented\nArchived",
+   "default": "Draft Recommendation",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "الموضوع"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "نوع السجل المرتبط",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "السجل المرتبط",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "recommending_entity",
+   "fieldtype": "Data",
+   "label": "الجهة المعدة للتوصية"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Text",
+   "label": "نص التوصية"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "أعدّ التوصية",
+   "options": "User",
+   "read_only": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "referred_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ الإحالة",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_section",
+   "fieldtype": "Section Break",
+   "label": "القرار النهائي"
+  },
+  {
+   "fieldname": "final_decision",
+   "fieldtype": "Text",
+   "label": "نص القرار النهائي",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "تاريخ القرار",
+   "read_only": 1
+  },
+  {
+   "fieldname": "external_reference",
+   "fieldtype": "Data",
+   "label": "مرجع القرار الخارجي"
+  },
+  {
+   "fieldname": "decision_maker",
+   "fieldtype": "Link",
+   "label": "صاحب الصلاحية",
+   "options": "User",
+   "read_only": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ ووقت الاعتماد",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "سبب الرفض",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "المرفقات"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "ملاحظات"
+  },
+  {
+   "fieldname": "audit_section",
+   "fieldtype": "Section Break",
+   "label": "بيانات التسجيل"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "سجّل القرار",
+   "options": "User",
+   "read_only": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "recorded_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ ووقت التسجيل",
+   "read_only": 1
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "درجة السرية",
+   "options": "Normal\nConfidential\nHighly Confidential",
+   "default": "Confidential"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Management",
+ "name": "Legal Decision",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Contract Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Opinion Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Employee Complaints Committee Chair",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Authorized Decision Maker",
+   "create": 0,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "decision_title",
+ "search_fields": "decision_title,reference_name,recommending_entity",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

@@ -1,0 +1,584 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 0,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "employee",
+  "employee_name",
+  "employee_number",
+  "department",
+  "designation",
+  "company",
+  "raised_by_user",
+  "submitted_on_behalf",
+  "request_date",
+  "grievance_section",
+  "grievance_title",
+  "grievance_type",
+  "grievance_details",
+  "facts_and_dates",
+  "related_parties",
+  "evidence",
+  "confidentiality",
+  "importance",
+  "jurisdiction_section",
+  "jurisdiction_help",
+  "jurisdiction_type",
+  "referral_date",
+  "original_jurisdiction",
+  "transferred_on",
+  "transferred_by",
+  "transfer_reason",
+  "workflow_section",
+  "status",
+  "current_responsible",
+  "target_completion_date",
+  "committee",
+  "last_committee_meeting",
+  "clarifications_section",
+  "clarifications",
+  "recommendation_section",
+  "recommendation",
+  "recommendation_prepared_by",
+  "recommendation_date",
+  "approved_decision",
+  "decision_reference",
+  "decision_by",
+  "decision_date",
+  "closure_date",
+  "closure_reason",
+  "links_section",
+  "legal_opinion_request",
+  "legal_case",
+  "attachments",
+  "internal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "GRV-.YYYY.-.######",
+   "default": "GRV-.YYYY.-.######",
+   "reqd": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "الموظف مقدم الشكوى",
+   "options": "Employee",
+   "reqd": 1,
+   "read_only": 1,
+   "in_list_view": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "اسم الموظف",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "employee_number",
+   "fieldtype": "Data",
+   "label": "الرقم الوظيفي",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "الإدارة / القسم",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "المسمى الوظيفي",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "الشركة",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "raised_by_user",
+   "fieldtype": "Link",
+   "label": "قدّمها المستخدم",
+   "options": "User",
+   "read_only": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "submitted_on_behalf",
+   "fieldtype": "Check",
+   "label": "مقدمة نيابة عن الموظف",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "تاريخ التقديم",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grievance_section",
+   "fieldtype": "Section Break",
+   "label": "تفاصيل الشكوى"
+  },
+  {
+   "fieldname": "grievance_title",
+   "fieldtype": "Data",
+   "label": "عنوان الشكوى",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "grievance_type",
+   "fieldtype": "Select",
+   "label": "نوع الشكوى",
+   "options": "Workplace\nDiscrimination\nHarassment\nFinancial\nAdministrative\nContractual\nRetaliation\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grievance_details",
+   "fieldtype": "Text",
+   "label": "تفاصيل الشكوى",
+   "reqd": 1
+  },
+  {
+   "fieldname": "facts_and_dates",
+   "fieldtype": "Text",
+   "label": "الوقائع والتواريخ"
+  },
+  {
+   "fieldname": "related_parties",
+   "fieldtype": "Small Text",
+   "label": "الأطراف المرتبطة"
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Attach",
+   "label": "الأدلة والمرفقات"
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "درجة السرية",
+   "options": "Normal\nConfidential\nHighly Confidential",
+   "default": "Confidential"
+  },
+  {
+   "fieldname": "importance",
+   "fieldtype": "Select",
+   "label": "درجة الأهمية",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "jurisdiction_section",
+   "fieldtype": "Section Break",
+   "label": "جهة الاختصاص"
+  },
+  {
+   "fieldname": "jurisdiction_help",
+   "fieldtype": "HTML",
+   "label": "إرشاد",
+   "options": "<div class=\"text-muted small\">اختر الجهة بنفسك قبل الإرسال. إدارة الشؤون القانونية تدرس الشكوى قانونيًا، ولجنة شكاوى الموظفين تنظرها وفق لوائح اللجنة. لا توجد جهة موارد بشرية في مسار الشكوى.</div>"
+  },
+  {
+   "fieldname": "jurisdiction_type",
+   "fieldtype": "Select",
+   "label": "جهة الاختصاص",
+   "options": "\nLegal Department\nEmployee Complaints Committee",
+   "in_list_view": 1,
+   "description": "إدارة الشؤون القانونية = مسار قانوني مباشر. لجنة شكاوى الموظفين = مسار اللجنة مباشرة. الاختيار إلزامي عند الإرسال.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "referral_date",
+   "fieldtype": "Datetime",
+   "label": "تاريخ الإحالة",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "original_jurisdiction",
+   "fieldtype": "Data",
+   "label": "جهة الاختصاص الأصلية",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "transferred_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ ووقت التحويل",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "transferred_by",
+   "fieldtype": "Link",
+   "label": "حوّلها المستخدم",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "transfer_reason",
+   "fieldtype": "Small Text",
+   "label": "سبب التحويل",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "المسار والمسؤولية"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة الشكوى",
+   "options": "Draft\nSubmitted\nLegal Review\nCommittee Review\nAwaiting Information\nLegal Recommendation\nCommittee Recommendation\nScheduled for Meeting\nUnder Committee Deliberation\nPending Decision\nDecision Issued\nClosed\nRejected",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "current_responsible",
+   "fieldtype": "Link",
+   "label": "المسؤول الحالي",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "target_completion_date",
+   "fieldtype": "Date",
+   "label": "التاريخ المستهدف للإنجاز",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "committee",
+   "fieldtype": "Link",
+   "label": "لجنة شكاوى الموظفين",
+   "options": "Employee Complaints Committee",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "last_committee_meeting",
+   "fieldtype": "Link",
+   "label": "آخر اجتماع للجنة",
+   "options": "Employee Complaints Committee Meeting",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "clarifications_section",
+   "fieldtype": "Section Break",
+   "label": "الردود والإيضاحات"
+  },
+  {
+   "fieldname": "clarifications",
+   "fieldtype": "Table",
+   "label": "طلبات الإيضاح والردود",
+   "options": "Employee Grievance Clarification",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "recommendation_section",
+   "fieldtype": "Section Break",
+   "label": "التوصية والقرار"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Text",
+   "label": "التوصية النهائية",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "recommendation_prepared_by",
+   "fieldtype": "Link",
+   "label": "أعدّ التوصية",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "recommendation_date",
+   "fieldtype": "Date",
+   "label": "تاريخ إعداد التوصية",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "approved_decision",
+   "fieldtype": "Text",
+   "label": "القرار المعتمد",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "decision_reference",
+   "fieldtype": "Link",
+   "label": "مرجع القرار",
+   "options": "Legal Decision",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "decision_by",
+   "fieldtype": "Link",
+   "label": "اعتمد القرار",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "تاريخ القرار",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "closure_date",
+   "fieldtype": "Date",
+   "label": "تاريخ إغلاق الشكوى",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "closure_reason",
+   "fieldtype": "Small Text",
+   "label": "سبب الإغلاق",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "الروابط والمرفقات"
+  },
+  {
+   "fieldname": "legal_opinion_request",
+   "fieldtype": "Link",
+   "label": "طلب رأي قانوني اختياري",
+   "options": "Legal Opinion Request"
+  },
+  {
+   "fieldname": "legal_case",
+   "fieldtype": "Link",
+   "label": "قضية قانونية مرتبطة",
+   "options": "Legal Case"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "مرفقات إضافية"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text",
+   "label": "ملاحظات داخلية"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Employee Grievances",
+ "name": "Employee Legal Grievance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 0,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Employee Grievance Submitter",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 1,
+   "cancel": 0,
+   "report": 1,
+   "export": 0,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Employee Complaints Committee Chair",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Employee Complaints Committee Secretary",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Employee Complaints Committee Member",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Authorized Decision Maker",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 0,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "grievance_title",
+ "search_fields": "grievance_title,employee_name,employee,department",
+ "is_submittable": 1,
+ "istable": 0,
+ "issingle": 0
+}

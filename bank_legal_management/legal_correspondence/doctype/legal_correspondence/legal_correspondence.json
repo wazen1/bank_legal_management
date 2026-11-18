@@ -1,0 +1,320 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "correspondence_type",
+  "correspondence_date",
+  "subject",
+  "sender",
+  "recipient",
+  "channel",
+  "external_reference",
+  "status",
+  "follow_up_owner",
+  "confidentiality",
+  "summary",
+  "action_taken",
+  "due_date",
+  "links_section",
+  "related_case",
+  "related_contract",
+  "related_grievance",
+  "related_opinion_request",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "LCOR-.YYYY.-.#####",
+   "default": "LCOR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "correspondence_type",
+   "fieldtype": "Select",
+   "label": "نوع المراسلة",
+   "options": "Incoming\nOutgoing\nInternal",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "correspondence_date",
+   "fieldtype": "Date",
+   "label": "التاريخ",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "الموضوع",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sender",
+   "fieldtype": "Data",
+   "label": "الجهة المرسلة"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "label": "الجهة المستلمة"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "وسيلة الاستلام أو الإرسال",
+   "options": "Email\nCourier\nHand Delivery\nInternal\nOther"
+  },
+  {
+   "fieldname": "external_reference",
+   "fieldtype": "Data",
+   "label": "رقم المرجع الخارجي"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "الحالة",
+   "options": "Draft\nReceived\nSent\nUnder Follow-up\nClosed",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "follow_up_owner",
+   "fieldtype": "Link",
+   "label": "المسؤول عن المتابعة",
+   "options": "Employee",
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "درجة السرية",
+   "options": "Normal\nConfidential\nHighly Confidential",
+   "default": "Confidential"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text",
+   "label": "نص المراسلة أو ملخصها"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Text",
+   "label": "الإجراء المتخذ"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الاستحقاق"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "الروابط"
+  },
+  {
+   "fieldname": "related_case",
+   "fieldtype": "Link",
+   "label": "القضية",
+   "options": "Legal Case"
+  },
+  {
+   "fieldname": "related_contract",
+   "fieldtype": "Link",
+   "label": "العقد",
+   "options": "Legal Contract"
+  },
+  {
+   "fieldname": "related_grievance",
+   "fieldtype": "Link",
+   "label": "الشكوى",
+   "options": "Employee Legal Grievance"
+  },
+  {
+   "fieldname": "related_opinion_request",
+   "fieldtype": "Link",
+   "label": "طلب الرأي القانوني",
+   "options": "Legal Opinion Request"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "المرفقات"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Correspondence",
+ "name": "Legal Correspondence",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Contract Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Grievance Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Document Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "subject",
+ "search_fields": "subject,sender,recipient,external_reference,correspondence_date",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

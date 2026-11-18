@@ -1,0 +1,426 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "contract_title",
+  "contract_type",
+  "status",
+  "party_section",
+  "party_type",
+  "party",
+  "party_name",
+  "company",
+  "owning_department",
+  "contract_owner",
+  "external_counsel",
+  "dates_section",
+  "draft_date",
+  "legal_review_date",
+  "signature_date",
+  "start_date",
+  "end_date",
+  "contract_value",
+  "currency",
+  "confidentiality",
+  "terms_section",
+  "payment_terms",
+  "renewal_terms",
+  "termination_terms",
+  "key_obligations",
+  "signed_contract",
+  "draft_versions",
+  "legal_notes",
+  "governance_section",
+  "approved_by",
+  "approval_date",
+  "renewal_of",
+  "terminated_on",
+  "termination_reason",
+  "approval_history",
+  "integration_section",
+  "project",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "CON-.YYYY.-.#####",
+   "default": "CON-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_title",
+   "fieldtype": "Data",
+   "label": "عنوان العقد",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "نوع العقد",
+   "options": "Service\nLease\nConsultancy\nEmployment\nNDA\nSettlement\nLoan\nProcurement\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة العقد",
+   "options": "Draft\nUnder Legal Review\nReturned for Amendment\nPending Approval\nPending Signature\nActive\nExpiring\nRenewed\nTerminated\nExpired\nArchived",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "party_section",
+   "fieldtype": "Section Break",
+   "label": "الطرف المتعاقد"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "نوع الطرف",
+   "options": "Customer\nSupplier\nEmployee\nOther"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "مرجع الطرف في ERPNext",
+   "options": "party_type"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "اسم الطرف"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "الشركة",
+   "options": "Company"
+  },
+  {
+   "fieldname": "owning_department",
+   "fieldtype": "Link",
+   "label": "الإدارة المالكة للعقد",
+   "options": "Department"
+  },
+  {
+   "fieldname": "contract_owner",
+   "fieldtype": "Link",
+   "label": "المسؤول عن العقد",
+   "options": "Employee",
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "external_counsel",
+   "fieldtype": "Link",
+   "label": "المستشار القانوني الخارجي",
+   "options": "Legal Counsel"
+  },
+  {
+   "fieldname": "dates_section",
+   "fieldtype": "Section Break",
+   "label": "التواريخ والقيمة"
+  },
+  {
+   "fieldname": "draft_date",
+   "fieldtype": "Date",
+   "label": "تاريخ إعداد المسودة"
+  },
+  {
+   "fieldname": "legal_review_date",
+   "fieldtype": "Date",
+   "label": "تاريخ المراجعة القانونية"
+  },
+  {
+   "fieldname": "signature_date",
+   "fieldtype": "Date",
+   "label": "تاريخ التوقيع"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "تاريخ بدء السريان"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "تاريخ انتهاء السريان"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "قيمة العقد",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "العملة",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "مستوى السرية",
+   "options": "Normal\nConfidential\nHighly Confidential",
+   "default": "Confidential"
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break",
+   "label": "الشروط والالتزامات"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Small Text",
+   "label": "شروط الدفع"
+  },
+  {
+   "fieldname": "renewal_terms",
+   "fieldtype": "Small Text",
+   "label": "شروط التجديد"
+  },
+  {
+   "fieldname": "termination_terms",
+   "fieldtype": "Small Text",
+   "label": "شروط الإنهاء"
+  },
+  {
+   "fieldname": "key_obligations",
+   "fieldtype": "Text",
+   "label": "الالتزامات الأساسية"
+  },
+  {
+   "fieldname": "signed_contract",
+   "fieldtype": "Attach",
+   "label": "نسخة العقد الموقعة"
+  },
+  {
+   "fieldname": "draft_versions",
+   "fieldtype": "Attach",
+   "label": "المسودات والتعديلات"
+  },
+  {
+   "fieldname": "legal_notes",
+   "fieldtype": "Text",
+   "label": "ملاحظات قانونية"
+  },
+  {
+   "fieldname": "governance_section",
+   "fieldtype": "Section Break",
+   "label": "الاعتماد والتجديد"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "اعتمد العقد",
+   "options": "User",
+   "read_only": 1,
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الاعتماد",
+   "read_only": 1
+  },
+  {
+   "fieldname": "renewal_of",
+   "fieldtype": "Link",
+   "label": "العقد الأصلي عند التجديد",
+   "options": "Legal Contract"
+  },
+  {
+   "fieldname": "terminated_on",
+   "fieldtype": "Date",
+   "label": "تاريخ الإنهاء"
+  },
+  {
+   "fieldname": "termination_reason",
+   "fieldtype": "Small Text",
+   "label": "سبب الإنهاء"
+  },
+  {
+   "fieldname": "approval_history",
+   "fieldtype": "Table",
+   "label": "سجل الموافقات",
+   "options": "Legal Contract Approval"
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "التكامل"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "المشروع",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "مركز التكلفة",
+   "options": "Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Contract Management",
+ "name": "Legal Contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Contract Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Officer",
+   "create": 0,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Document Officer",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Authorized Decision Maker",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 0,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "contract_title",
+ "search_fields": "contract_title,party_name,contract_type",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

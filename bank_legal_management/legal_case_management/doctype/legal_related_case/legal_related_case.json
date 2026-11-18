@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "legal_case",
+  "relation_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "legal_case",
+   "fieldtype": "Link",
+   "label": "القضية المرتبطة",
+   "options": "Legal Case",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "relation_type",
+   "fieldtype": "Select",
+   "label": "نوع العلاقة",
+   "options": "Related\nAppeal\nCounterclaim\nConsolidated",
+   "in_list_view": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Case Management",
+ "name": "Legal Related Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0
+}

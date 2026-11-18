@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:50:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "portal_section",
+  "intro",
+  "grievance_guidance",
+  "portal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "portal_section",
+   "fieldtype": "Section Break",
+   "label": "بوابة الشؤون القانونية"
+  },
+  {
+   "fieldname": "intro",
+   "fieldtype": "Long Text",
+   "label": "تعريف بالبوابة",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grievance_guidance",
+   "fieldtype": "Long Text",
+   "label": "إرشادات تقديم الشكوى"
+  },
+  {
+   "fieldname": "portal_notes",
+   "fieldtype": "Text",
+   "label": "ملاحظات"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_single": 1,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-10-22 12:50:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Portal",
+ "name": "Legal Portal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "report": 1,
+   "role": "All"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Authorized Decision Maker",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee Complaints Committee Chair",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee Complaints Committee Member",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee Complaints Committee Secretary",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee Grievance Submitter",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Auditor",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Case Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Contract Officer",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Department Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Document Officer",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Expense Officer",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Grievance Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Grievance Officer",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Officer",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Opinion Officer",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Opinion Requester",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal System Administrator",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "",
+ "track_changes": 1
+}

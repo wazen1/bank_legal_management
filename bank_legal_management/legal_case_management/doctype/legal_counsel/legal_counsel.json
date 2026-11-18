@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "counsel_name",
+  "counsel_type",
+  "status",
+  "employee",
+  "supplier",
+  "law_firm",
+  "license_number",
+  "specialization",
+  "phone",
+  "email",
+  "address",
+  "engagement_start",
+  "engagement_end",
+  "fee_terms",
+  "notes",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "السلسلة",
+   "options": "LCN-.YYYY.-.#####",
+   "default": "LCN-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "counsel_name",
+   "fieldtype": "Data",
+   "label": "اسم المحامي",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "counsel_type",
+   "fieldtype": "Select",
+   "label": "نوع المحامي",
+   "options": "Internal\nExternal",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "حالة التعامل",
+   "options": "Active\nSuspended\nEnded",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "الموظف (للمحامي الداخلي)",
+   "options": "Employee",
+   "ignore_user_permissions": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "المورد (للمكتب الخارجي)",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "law_firm",
+   "fieldtype": "Data",
+   "label": "المكتب القانوني"
+  },
+  {
+   "fieldname": "license_number",
+   "fieldtype": "Data",
+   "label": "رقم الترخيص المهني"
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Data",
+   "label": "التخصص"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "الهاتف"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "البريد الإلكتروني",
+   "options": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "العنوان"
+  },
+  {
+   "fieldname": "engagement_start",
+   "fieldtype": "Date",
+   "label": "تاريخ بداية التعاقد"
+  },
+  {
+   "fieldname": "engagement_end",
+   "fieldtype": "Date",
+   "label": "تاريخ انتهاء التعاقد"
+  },
+  {
+   "fieldname": "fee_terms",
+   "fieldtype": "Text",
+   "label": "شروط الأتعاب"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "ملاحظات"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "المستندات ذات الصلة"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Case Management",
+ "name": "Legal Counsel",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Case Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Contract Officer",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Officer",
+   "create": 0,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "title_field": "counsel_name",
+ "search_fields": "counsel_name,law_firm,license_number,email",
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0
+}

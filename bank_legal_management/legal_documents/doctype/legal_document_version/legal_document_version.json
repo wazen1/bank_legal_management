@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "version_no",
+  "version_date",
+  "attachment",
+  "notes",
+  "uploaded_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "version_no",
+   "fieldtype": "Int",
+   "label": "رقم الإصدار",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "version_date",
+   "fieldtype": "Date",
+   "label": "تاريخ الإصدار",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "نسخة الإصدار",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "ملاحظات"
+  },
+  {
+   "fieldname": "uploaded_by",
+   "fieldtype": "Link",
+   "label": "أضافه",
+   "options": "User",
+   "read_only": 1,
+   "ignore_user_permissions": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Documents",
+ "name": "Legal Document Version",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0
+}

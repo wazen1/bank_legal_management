@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 1,
+ "creation": "2026-10-22 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "default_company",
+  "default_currency",
+  "enable_email_notifications",
+  "enable_scheduler_alerts",
+  "allow_grievance_on_behalf",
+  "allow_opinion_on_behalf",
+  "alerts_section",
+  "hearing_alert_days",
+  "contract_expiry_alert_days",
+  "obligation_due_alert_days",
+  "opinion_due_alert_days",
+  "meeting_alert_days",
+  "grievance_stale_days",
+  "governance_section",
+  "contract_activation_requires_signature",
+  "grievance_close_requires_decision",
+  "grievance_decision_separation_required",
+  "committee_quorum_percent",
+  "committee_minutes_require_approval",
+  "committee_quorum_note",
+  "notification_section",
+  "alert_recipients"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "الإعدادات العامة"
+  },
+  {
+   "fieldname": "default_company",
+   "fieldtype": "Link",
+   "label": "الشركة الافتراضية",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "العملة الافتراضية",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "enable_email_notifications",
+   "fieldtype": "Check",
+   "label": "تفعيل إشعارات البريد الإلكتروني",
+   "default": "0",
+   "description": "عند تعطيله تُسجّل الإشعارات داخل النظام فقط دون إرسال بريد."
+  },
+  {
+   "fieldname": "enable_scheduler_alerts",
+   "fieldtype": "Check",
+   "label": "تفعيل التنبيهات المجدولة",
+   "default": "1"
+  },
+  {
+   "fieldname": "allow_grievance_on_behalf",
+   "fieldtype": "Check",
+   "label": "السماح بتقديم شكوى نيابة عن موظف",
+   "default": "0",
+   "description": "يتطلب سياسة رسمية. لا يُفعّل افتراضيًا."
+  },
+  {
+   "fieldname": "allow_opinion_on_behalf",
+   "fieldtype": "Check",
+   "label": "السماح بطلب رأي قانوني نيابة عن جهة",
+   "default": "0"
+  },
+  {
+   "fieldname": "alerts_section",
+   "fieldtype": "Section Break",
+   "label": "فترات التنبيه بالأيام"
+  },
+  {
+   "fieldname": "hearing_alert_days",
+   "fieldtype": "Int",
+   "label": "التنبيه قبل جلسة قضية",
+   "default": "7"
+  },
+  {
+   "fieldname": "contract_expiry_alert_days",
+   "fieldtype": "Int",
+   "label": "التنبيه قبل انتهاء عقد",
+   "default": "30"
+  },
+  {
+   "fieldname": "obligation_due_alert_days",
+   "fieldtype": "Int",
+   "label": "التنبيه قبل استحقاق التزام",
+   "default": "7"
+  },
+  {
+   "fieldname": "opinion_due_alert_days",
+   "fieldtype": "Int",
+   "label": "التنبيه قبل استحقاق رأي قانوني",
+   "default": "3"
+  },
+  {
+   "fieldname": "meeting_alert_days",
+   "fieldtype": "Int",
+   "label": "التنبيه قبل اجتماع اللجنة",
+   "default": "2"
+  },
+  {
+   "fieldname": "grievance_stale_days",
+   "fieldtype": "Int",
+   "label": "أيام قبل اعتبار الشكوى متأخرة",
+   "default": "14"
+  },
+  {
+   "fieldname": "governance_section",
+   "fieldtype": "Section Break",
+   "label": "ضوابط الحوكمة"
+  },
+  {
+   "fieldname": "contract_activation_requires_signature",
+   "fieldtype": "Check",
+   "label": "يتطلب توقيع العقد قبل التفعيل",
+   "default": "1"
+  },
+  {
+   "fieldname": "grievance_close_requires_decision",
+   "fieldtype": "Check",
+   "label": "يتطلب قرارًا معتمدًا قبل إغلاق الشكوى",
+   "default": "1"
+  },
+  {
+   "fieldname": "grievance_decision_separation_required",
+   "fieldtype": "Check",
+   "label": "الفصل بين إعداد التوصية واعتماد القرار",
+   "default": "1"
+  },
+  {
+   "fieldname": "committee_quorum_percent",
+   "fieldtype": "Int",
+   "label": "نسبة النصاب الافتراضية للجنة",
+   "default": "0",
+   "description": "0 = غير محدد؛ تُطبق نسبة اللجنة أو لوائحها إن وجدت."
+  },
+  {
+   "fieldname": "committee_minutes_require_approval",
+   "fieldtype": "Check",
+   "label": "يتطلب اعتماد محاضر اللجنة",
+   "default": "0"
+  },
+  {
+   "fieldname": "committee_quorum_note",
+   "fieldtype": "Small Text",
+   "label": "ملاحظة النصاب والتصويت",
+   "description": "تعبئة هذا الحقل لا تعني اعتماد النصاب تلقائيًا؛ يجب مطابقته للوائح المصرف."
+  },
+  {
+   "fieldname": "notification_section",
+   "fieldtype": "Section Break",
+   "label": "مستلمو التنبيهات الإضافيون"
+  },
+  {
+   "fieldname": "alert_recipients",
+   "fieldtype": "Table",
+   "label": "مستلمو التنبيهات",
+   "options": "Legal Alert Recipient"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Management",
+ "name": "Legal Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal System Administrator",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Department Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  },
+  {
+   "role": "Legal Auditor",
+   "create": 0,
+   "read": 1,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 0,
+   "import": 0,
+   "permlevel": 0
+  }
+ ],
+ "quick_entry": 0,
+ "states": [],
+ "track_changes": 1,
+ "issingle": 1,
+ "istable": 0,
+ "is_submittable": 0
+}
